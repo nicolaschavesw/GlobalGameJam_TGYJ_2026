@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class SliderController : MonoBehaviour
 {
@@ -14,11 +15,19 @@ public class SliderController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (Keyboard.current.spaceKey.wasPressedThisFrame)
+        {
+            Debug.Log("SPACE mantenido");
+            AddSliderValue(1.0f);
+        }
     }
 
     public float AddSliderValue(float addValue)
     {
+        slider.value += addValue;
         return slider.value;
     }
+
+    
+
 }
