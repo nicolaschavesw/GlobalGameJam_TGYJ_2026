@@ -8,8 +8,11 @@ public class ButtonInterface : MonoBehaviour
     bool clickeado = false;
     SpriteRenderer sr;
     private Color mainColor;
-    public GameObject Window;
-    
+    public GameObject mainWindow;
+    public GameObject otherWindowA;
+    public GameObject otherWindowB;
+    public GameObject otherWindowC;
+
     private void Awake()
     {
         sr = GetComponent<SpriteRenderer>();
@@ -45,13 +48,11 @@ public class ButtonInterface : MonoBehaviour
 
     void OnMouseEnter2D()
     {
-        Debug.Log("🟢 Mouse encima");
         sr.color = new Color(0.5871751f, 0.6969928f, 0.8584906f, 1f);
     }
 
     void OnMouseExit2D()
     {
-        Debug.Log("🔴 Mouse salió");
         sr.color = mainColor;
     }
 
@@ -65,9 +66,16 @@ public class ButtonInterface : MonoBehaviour
 
     IEnumerator DespuesDelClick()
     {
-        Window.SetActive(true);
+        mainWindow.SetActive(true);
+        foreach (Transform child in otherWindowA.transform)
+            child.gameObject.SetActive(false);
+
+        foreach (Transform child in otherWindowB.transform)
+            child.gameObject.SetActive(false);
+
+        foreach (Transform child in otherWindowC.transform)
+            child.gameObject.SetActive(false);
         yield return new WaitForSeconds(0.2f);
-        Debug.Log("⏱ Acción después del click");
         sr.color = mainColor;
 
     }
