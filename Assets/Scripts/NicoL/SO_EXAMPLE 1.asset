@@ -12,21 +12,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b40ecca54bd46bd42be9fbcfdf5f5aaa, type: 3}
   m_Name: SO_EXAMPLE 1
   m_EditorClassIdentifier: Assembly-CSharp::PlayerEvent
-  nameEvent: EXAMPLE1
+  nameEvent: Organizar Tareas del dia
   numEvent: 0
   posibleOptions:
+  - CurretMask: 0
+    posibleOption: No haces Nada
+    consequence: Tu dia esta sin un orden y no sabes que pasara con ello
+    performancePoints: -100
+    burnoutPoints: -2
   - CurretMask: 1
-    posibleOption: hola
-    consequence: 
-    performancePoints: 0
-    burnoutPoints: 0
+    posibleOption: Organizar tus tareas del dia diligentemente
+    consequence: " Armas a un plan sobre el d\xEDa con el que est\xE1s satisfecho"
+    performancePoints: 200
+    burnoutPoints: 2
   - CurretMask: 2
-    posibleOption: 
-    consequence: 
-    performancePoints: 0
-    burnoutPoints: 0
-  - CurretMask: 2
-    posibleOption: 
-    consequence: 
-    performancePoints: 0
+    posibleOption: Organizar tus tareas con tu bienestar en mente
+    consequence: "Decides dejar un espacio para poder tomarte un descanso y no sobrecargarte.
+      Quiz\xE1 puedas usar esa energ\xEDa para otra cosa"
+    performancePoints: 150
+    burnoutPoints: 1
+  - CurretMask: 3
+    posibleOption: ' Integrar la mayor cantidad de tareas posibles a tu horario. '
+    consequence: "Quedas sin espacio para respirar, probablemente te arrepentir\xE1s
+      m\xE1s adelante"
+    performancePoints: 500
+    burnoutPoints: 4
+  - CurretMask: 4
+    posibleOption: "No organizar el d\xEDa y dejar al destino - y a tu voluntad -
+      las tareas a cumplir"
+    consequence: "Terminas improvisando las tareas sobre la marcha, quiz\xE1 un poco
+      m\xE1s de orden habr\xEDa ayudado a usar mejor el tiempo"
+    performancePoints: 50
     burnoutPoints: 0

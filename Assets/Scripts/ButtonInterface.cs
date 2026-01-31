@@ -5,7 +5,6 @@ using System.Collections;
 public class ButtonInterface : MonoBehaviour
 {
     bool mouseEncima = false;
-    bool clickeado = false;
     SpriteRenderer sr;
     private Color mainColor;
     public GameObject mainWindow;
@@ -56,27 +55,24 @@ public class ButtonInterface : MonoBehaviour
         sr.color = mainColor;
     }
 
-    void OnClick()
+    public void OnClick()
     {
-        Debug.Log("🖱 Click izquierdo");
-        clickeado = true;
         sr.color = new Color(0.1585974f, 0.2626831f, 0.4150943f, 1f);
         StartCoroutine(DespuesDelClick());
     }
 
     IEnumerator DespuesDelClick()
     {
-        mainWindow.SetActive(true);
+        foreach (Transform child in gameObject.transform)
+            child.gameObject.SetActive(true);
         foreach (Transform child in otherWindowA.transform)
             child.gameObject.SetActive(false);
-
         foreach (Transform child in otherWindowB.transform)
             child.gameObject.SetActive(false);
-
         foreach (Transform child in otherWindowC.transform)
             child.gameObject.SetActive(false);
+
         yield return new WaitForSeconds(0.2f);
         sr.color = mainColor;
-
     }
 }
