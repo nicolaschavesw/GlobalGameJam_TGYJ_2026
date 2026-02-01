@@ -8,7 +8,9 @@ public enum BasicEvents
 {
     OnStartEvent,
     OnEndEvent,
-    OnUseMask
+
+    OnChangeMaskSelection,
+    OnUseMask,
 }
 
 [Serializable]
