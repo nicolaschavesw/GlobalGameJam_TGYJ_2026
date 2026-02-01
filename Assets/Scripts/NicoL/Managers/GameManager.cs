@@ -2,16 +2,20 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    [Header("Points")]
+    [SerializeField] float performancePoints = 0;
+    [SerializeField] float burnoutPoints = 0;
+
     [SerializeField, Header("Basic info")]
     public int currentHour = 0;
 
     [SerializeField, Header("Events - ONLY VISUAL")]
     public string currentEvent = "None";
-    //[SerializeField] private string playerName = "None";
     [SerializeField] private Masks currentMask = Masks.None;
 
     public static GameManager Instance { get; private set; }
-    //public string PlayerName { get => playerName; set => playerName = value; }
+    public float PerformancePoints { get => performancePoints; set => performancePoints = value; }
+    public float BurnoutPoints { get => burnoutPoints; set => burnoutPoints = value; }
 
     void Awake()
     {
@@ -38,7 +42,6 @@ public class GameManager : MonoBehaviour
         EventsManager.Instance.Unsubscribe(BasicEvents.OnEndEvent, EndEvent);
     }
 
-    //public void SetPlayerName(string Name) { PlayerName = Name; }
     public void SetCurrentEvent(string NewEvent) { currentEvent = NewEvent; }
     public void SetCurrentMask(Masks newMask) {  currentMask = newMask; }
     public Masks GetCurrentMask() => currentMask;

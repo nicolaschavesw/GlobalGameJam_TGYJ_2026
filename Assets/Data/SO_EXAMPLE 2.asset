@@ -21,7 +21,7 @@ MonoBehaviour:
     performancePoints: 0
     burnoutPoints: 0
   - CurretMask: 1
-    posibleOption: " Asistir a la reuni\xF3n y usar la oferta que siempre funciona"
+    posibleOption: "Asistir a la reuni\xF3n y usar la oferta que siempre funciona"
     consequence: "Llegan a un acuerdo con el que ambos est\xE1n satisfechos y la
       reuni\xF3n finaliza con una cordial afirmaci\xF3n de que volver\xEDan a trabajar
       juntos nuevamente en el futuro"

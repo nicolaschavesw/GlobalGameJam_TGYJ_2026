@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using TMPro;
+using UnityEditor.Overlays;
 using UnityEngine;
 
 public class MeetingManager : MonoBehaviour
@@ -30,6 +31,7 @@ public class MeetingManager : MonoBehaviour
     [ContextMenu("FindComponents")]
     public void FindComponents()
     {
+        textOptionsList = new List<TextOptions>();
         foreach (var item in textOptions)
         {
             TextOptions newDataText = new TextOptions()
@@ -86,21 +88,22 @@ public class MeetingManager : MonoBehaviour
     { 
         Masks currentMask = GameManager.Instance.GetCurrentMask();
 
-        foreach (var option in data.posibleOptions)
+        for (int i = 0; i < textOptions.Count;i++)
         {
-            foreach(var baseData in textOptionsList)
-            {
-                baseData.tmp_text.text = option.posibleOption;
+            TextOptions baseData = textOptionsList[i];
+            EventOptions option = data.posibleOptions[i];
 
-                Sprite spriteIcon = PlayerEventDataManager.Instance.GetSpriteMask(option.CurretMask);
-                if (spriteIcon != null)
-                    baseData.sr_frame.sprite = spriteIcon;
+            baseData.tmp_text.text = option.posibleOption;
+            Debug.Log(option.posibleOption);
 
-                if (currentMask != option.CurretMask)
-                    baseData.sr_baseSprite.color = colorBlockOption;
-                else
-                    baseData.sr_baseSprite.color = Color.white;
-            }
+            Sprite spriteIcon = PlayerEventDataManager.Instance.GetSpriteMask(option.CurretMask);
+            if (spriteIcon != null)
+                baseData.sr_frame.sprite = spriteIcon;
+
+            if (currentMask != option.CurretMask && currentMask != Masks.None)
+                baseData.sr_baseSprite.color = colorBlockOption;
+            else
+                baseData.sr_baseSprite.color = Color.white;
         }
     }
 }
