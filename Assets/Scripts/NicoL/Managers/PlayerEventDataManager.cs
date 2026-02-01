@@ -4,7 +4,7 @@ using System.Linq;
 
 public class PlayerEventDataManager : MonoBehaviour
 {
-    private static PlayerEventDataManager Instance;
+    public static PlayerEventDataManager Instance { get; private set; }
 
     [Header("All events")]
     public int currentEvent = -1;

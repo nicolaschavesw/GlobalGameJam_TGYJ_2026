@@ -41,6 +41,7 @@ public class GameManager : MonoBehaviour
     //public void SetPlayerName(string Name) { PlayerName = Name; }
     public void SetCurrentEvent(string NewEvent) { currentEvent = NewEvent; }
     public void SetCurrentMask(Masks newMask) {  currentMask = newMask; }
+    public Masks GetCurrentMask() => currentMask;
 
     void StartEvent(object newEvent)
     {
