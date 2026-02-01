@@ -12,8 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b40ecca54bd46bd42be9fbcfdf5f5aaa, type: 3}
   m_Name: SO_EXAMPLE 4
   m_EditorClassIdentifier: Assembly-CSharp::PlayerEvent
-  nameEvent: EXAMPLE4
-  randomEvent: 1
+  nameEvent: Adelantar trabajo
   numEvent: 0
   posibleOptions:
   - CurretMask: 0
@@ -21,13 +20,32 @@ MonoBehaviour:
     consequence: 
     performancePoints: 0
     burnoutPoints: 0
+  - CurretMask: 1
+    posibleOption: "Ver qu\xE9 pendientes puedes adelantar"
+    consequence: "Consigues adelantar algunos aspectos de las pr\xF3ximas tareas,
+      te sientes satisfecho con tu trabajo y esperas que tu yo del futuro te lo agradezca"
+    performancePoints: 200
+    burnoutPoints: 2
   - CurretMask: 2
-    posibleOption: 
-    consequence: 
+    posibleOption: Mas que adelantar trabajo, organizar la prioridad de las tareas
+    consequence: "Te organizas mejor para futuro y aunque las tareas siguen sin completarse
+      sabes que ser\xE1n m\xE1s f\xE1ciles de cumplir"
+    performancePoints: 50
+    burnoutPoints: 1
+  - CurretMask: 3
+    posibleOption: "Determinarse a terminar la tarea m\xE1s importante de la pr\xF3xima
+      semana"
+    consequence: " Tal tarea resulta ser demasiado complicada para terminar en un
+      solo d\xEDa, sin la suficiente preparaci\xF3n y con el resto del equipo ocupado
+      con sus propias tareas no logras completar nada y terminas \xFAnicamente con
+      una frustraci\xF3n dif\xEDcil de disipar. El saber un poco mejor a lo que te
+      vas a enfrentar la siguiente semana resulta ser un premio de consolaci\xF3n."
+    performancePoints: 100
+    burnoutPoints: 4
+  - CurretMask: 4
+    posibleOption: Usar el tiempo libre para relajarte
+    consequence: Entras a tiktok y sientes como todos esos videos de skibidi toilet
+      recargan tu mente, al final te dan ganas de jugar roblox, esos brainrots no
+      se van a robar solos
     performancePoints: 0
-    burnoutPoints: 0
-  - CurretMask: 2
-    posibleOption: 
-    consequence: 
-    performancePoints: 0
-    burnoutPoints: 0
+    burnoutPoints: -2

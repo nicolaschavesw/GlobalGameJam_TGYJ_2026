@@ -12,8 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b40ecca54bd46bd42be9fbcfdf5f5aaa, type: 3}
   m_Name: SO_EXAMPLE 5
   m_EditorClassIdentifier: Assembly-CSharp::PlayerEvent
-  nameEvent: EXAMPLE5
-  randomEvent: 1
+  nameEvent: "Celebraci\xF3n de cumplea\xF1os"
   numEvent: 0
   posibleOptions:
   - CurretMask: 0
@@ -21,13 +20,29 @@ MonoBehaviour:
     consequence: 
     performancePoints: 0
     burnoutPoints: 0
+  - CurretMask: 1
+    posibleOption: "Unirse a la reuni\xF3n y cantar con los dem\xE1s"
+    consequence: "Notas que hay varias personas que no se encuentran satisfechas
+      con la torta, decides invitarles a salir a comer luego, aprecian tu atenci\xF3n"
+    performancePoints: 200
+    burnoutPoints: 1
   - CurretMask: 2
-    posibleOption: 
-    consequence: 
-    performancePoints: 0
-    burnoutPoints: 0
-  - CurretMask: 2
-    posibleOption: 
-    consequence: 
-    performancePoints: 0
-    burnoutPoints: 0
+    posibleOption: "Entrar a la reuni\xF3n y unicamente escuchar"
+    consequence: "Prefieres no unirte a la canci\xF3n de cumplea\xF1os con los dem\xE1s,
+      le est\xE1n celebrando a \"Choko\" y hay algo que te huele mal sobre \xE9l"
+    performancePoints: -100
+    burnoutPoints: 1
+  - CurretMask: 3
+    posibleOption: "Gritar a todo pulmon durante la canci\xF3n de cumplea\xF1os"
+    consequence: "Pides por chat que te env\xEDen la torta por mail, recibes 10 me
+      enrisa. Sientes como si hubieses salvado la moral del equipo gracias a tus
+      ocurrencias"
+    performancePoints: 350
+    burnoutPoints: 2
+  - CurretMask: 4
+    posibleOption: Decidir no unirse en lo absoluto
+    consequence: " Al recibir un mensaje de Tania caes en cuenta que se te olvid\xF3
+      por completo que es su cumplea\xF1os el que est\xE1n festejando. Sientes c\xF3mo
+      la amistad se deteriora un poco"
+    performancePoints: -200
+    burnoutPoints: 2

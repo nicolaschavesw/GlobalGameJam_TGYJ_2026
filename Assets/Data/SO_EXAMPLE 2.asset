@@ -12,8 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b40ecca54bd46bd42be9fbcfdf5f5aaa, type: 3}
   m_Name: SO_EXAMPLE 2
   m_EditorClassIdentifier: Assembly-CSharp::PlayerEvent
-  nameEvent: EXAMPLE2
-  randomEvent: 1
+  nameEvent: Reunion con el cliente
   numEvent: 1
   posibleOptions:
   - CurretMask: 0
@@ -21,13 +20,38 @@ MonoBehaviour:
     consequence: 
     performancePoints: 0
     burnoutPoints: 0
+  - CurretMask: 1
+    posibleOption: " Asistir a la reuni\xF3n y usar la oferta que siempre funciona"
+    consequence: "Llegan a un acuerdo con el que ambos est\xE1n satisfechos y la
+      reuni\xF3n finaliza con una cordial afirmaci\xF3n de que volver\xEDan a trabajar
+      juntos nuevamente en el futuro"
+    performancePoints: 400
+    burnoutPoints: 3
   - CurretMask: 2
-    posibleOption: 
-    consequence: 
-    performancePoints: 0
-    burnoutPoints: 0
-  - CurretMask: 2
-    posibleOption: 
-    consequence: 
-    performancePoints: 0
-    burnoutPoints: 0
+    posibleOption: "Entrar un poco antes de tiempo para mentalizarte sobre c\xF3mo
+      abordar la situaci\xF3n"
+    consequence: " A pesar de haberte preparado, finalmente el cliente decide llegar
+      un acuerdo menor de lo que esperabas. Quedas con la sensaci\xF3n de que podr\xEDas
+      haber hecho un mejor esfuerzo"
+    performancePoints: 200
+    burnoutPoints: 2
+  - CurretMask: 3
+    posibleOption: "Proponerle un acuerdo muy ambicioso durante la reuni\xF3n"
+    consequence: "Al primer contacto parece que pierdes al cliente por completo.
+      Usas toda la labia que te queda en el sistema y de alguna manera consigues
+      convencer al cliente de que es una buena decisi\xF3n creer en ti. Consigues
+      completarlo pero notas c\xF3mo el peso de casi perder a un cliente tan importante
+      te estresa un poco."
+    performancePoints: 700
+    burnoutPoints: 5
+  - CurretMask: 4
+    posibleOption: Tomarselo con calma
+    consequence: "Gracias a las historias de reddit con parkour de minecraft de fondo
+      por poco olvidas la reuni\xF3n que ten\xEDas con el cliente. Llegas 10 min
+      tarde, algo que el cliente no aprecia. No analizaste bien lo que quer\xEDa
+      el cliente y ninguna de tus ofertas le parecen convincentes, finalmente decide
+      no tomar ninguna de ellas y terminan la conversaci\xF3n con una amarga sensaci\xF3n
+      de que no querr\xE1 volver a hacer negocios. Decides no darle importancia,
+      \"no es el \xFAnico cliente\", te dices para consolarte."
+    performancePoints: -300
+    burnoutPoints: -2
